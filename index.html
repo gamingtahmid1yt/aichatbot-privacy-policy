@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Privacy Policy for AI ChatBot 🇧🇩 - Learn how we handle your data">
+  <meta name="theme-color" content="#0088cc">
   <title>Privacy Policy - AI ChatBot 🇧🇩</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #0088cc;
+      --primary-dark: #006fa3;
+      --text: #222;
+      --text-dark: #000;
+      --bg: #f9f9f9;
+      --card-bg: #fff;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+      --transition: all 0.3s ease;
+    }
+
+    [data-theme="dark"] {
+      --primary: #4da6ff;
+      --primary-dark: #2d8bf0;
+      --text: #e0e0e0;
+      --text-dark: #f5f5f5;
+      --bg: #121212;
+      --card-bg: #1e1e1e;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.4);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -12,14 +41,15 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9f9f9;
-      color: #222;
-      padding: 20px;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 2rem 1rem;
       max-width: 900px;
-      margin: auto;
+      margin: 0 auto;
       line-height: 1.7;
       animation: fadeIn 0.7s ease-in-out;
+      min-height: 100vh;
     }
 
     @keyframes fadeIn {
@@ -29,87 +59,225 @@
 
     h1 {
       text-align: center;
-      margin-bottom: 30px;
-      font-size: 2.2em;
-      color: #0088cc;
+      margin-bottom: 2rem;
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      color: var(--primary);
+      font-weight: 700;
+      line-height: 1.3;
     }
 
     h2 {
-      margin-top: 25px;
-      color: #333;
-      font-size: 1.4em;
+      margin: 2rem 0 1rem;
+      color: var(--text-dark);
+      font-size: 1.4rem;
+      font-weight: 600;
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.3em;
+      height: 1em;
+      width: 4px;
+      background: var(--primary);
+      border-radius: 2px;
     }
 
     p {
-      margin: 10px 0;
+      margin: 1rem 0;
+      font-size: 1rem;
+      font-weight: 400;
     }
 
     strong {
-      color: #000;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    .policy-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .policy-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    .last-updated {
+      display: inline-block;
+      background: rgba(0, 136, 204, 0.1);
+      color: var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
     }
 
     .back-button {
       position: fixed;
-      bottom: 65px;
-      right: 15px;
-      background: #0088cc;
+      bottom: 2rem;
+      right: 1.5rem;
+      background: var(--primary);
       color: white;
-      padding: 12px 18px;
+      padding: 0.8rem 1.5rem;
       border: none;
-      border-radius: 8px;
-      font-size: 11px;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 500;
       cursor: pointer;
       text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      transition: background 1.1s;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 100;
     }
 
     .back-button:hover {
-      background: #006fa3;
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
     }
 
-    @media (max-width: 600px) {
+    .back-button svg {
+      width: 1rem;
+      height: 1rem;
+      fill: currentColor;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      bottom: 5.5rem;
+      right: 1.5rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      z-index: 100;
+    }
+
+    .theme-toggle:hover {
+      background: var(--primary-dark);
+      transform: scale(1.1);
+    }
+
+    .theme-toggle svg {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
       body {
-        padding: 15px;
+        padding: 1.5rem 1rem;
       }
-      h1 {
-        font-size: 1.7em;
+      
+      .policy-card {
+        padding: 1.5rem;
       }
-      h2 {
-        font-size: 1.2em;
-      }
+      
       .back-button {
-        font-size: 10px;
-        padding: 10px 14px;
+        padding: 0.7rem 1.2rem;
+        font-size: 0.8rem;
+      }
+      
+      .theme-toggle {
+        width: 2.5rem;
+        height: 2.5rem;
+        bottom: 5rem;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p><strong>Last Updated:</strong> August 7, 2025</p>
+  <div class="policy-card">
+    <h1>Privacy Policy</h1>
+    <span class="last-updated">Last Updated: August 7, 2025</span>
 
-  <p>Welcome to the AI ChatBot 🇧🇩! This privacy policy explains how we handle your data when you use our chatbot app.</p>
+    <p>Welcome to the AI ChatBot 🇧🇩! This privacy policy explains how we handle your data when you use our chatbot application. We are committed to protecting your privacy and ensuring transparency about our data practices.</p>
 
-  <h2>1. Data Collection</h2>
-  <p>We do not collect personal information such as your name, email, or location. Your messages may be used temporarily to generate responses but are not stored or shared.</p>
+    <h2>1. Data Collection</h2>
+    <p>We prioritize your privacy and do not collect personally identifiable information such as your name, email address, phone number, or precise location. Your chat messages are processed in real-time to generate responses but are not persistently stored on our servers or shared with third parties, except as necessary for the operation of the service.</p>
 
-  <h2>2. Local Storage</h2>
-  <p>Some information (like theme preference or chat history) may be stored on your device locally. This helps improve your experience.</p>
+    <h2>2. Local Storage</h2>
+    <p>To enhance your user experience, our application may store certain non-personal preferences (such as theme selection) and recent chat history locally on your device using browser storage mechanisms. This data remains on your device and can be cleared through your browser settings.</p>
 
-  <h2>3. Third-party APIs</h2>
-  <p>Our chatbot may use third-party AI APIs (e.g., Groq) to process your messages. We do not control their data policies.</p>
+    <h2>3. Third-party APIs</h2>
+    <p>Our chatbot utilizes third-party artificial intelligence APIs (such as Groq) to process and respond to your queries. While we select reputable providers, we do not control their data handling practices. We recommend reviewing the privacy policies of these third-party services for more information.</p>
 
-  <h2>4. Security</h2>
-  <p>We take reasonable steps to ensure your data is safe, but no system is 100% secure.</p>
+    <h2>4. Security Measures</h2>
+    <p>We implement industry-standard security protocols to protect your data during transmission and processing. However, please be aware that no electronic storage or transmission method is 100% secure. We continuously monitor and update our security practices to address emerging threats.</p>
 
-  <h2>5. Changes</h2>
-  <p>We may update this privacy policy. Please check back occasionally for updates.</p>
+    <h2>5. Policy Updates</h2>
+    <p>We may periodically update this privacy policy to reflect changes in our practices or legal requirements. Significant changes will be communicated through our application or website. Your continued use of the service after such changes constitutes acceptance of the updated policy.</p>
 
-  <h2>6. Contact</h2>
-  <p>If you have any questions, please contact: <strong>tahmidbusinessyt@gmail.com</strong></p>
+    <h2>6. Contact Information</h2>
+    <p>For any questions, concerns, or requests regarding your privacy or this policy, please contact us at: <strong>tahmidbusinessyt@gmail.com</strong>. We typically respond to inquiries within 2-3 business days.</p>
+  </div>
+
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" aria-label="Toggle dark mode">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z"/>
+    </svg>
+  </button>
 
   <!-- Back Button -->
-  <a href="https://gamingtahmid1yt.github.io/aichatbot/" class="back-button">← Go Back to AI ChatBot</a>
+  <a href="https://gamingtahmid1yt.github.io/aichatbot/" class="back-button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"/>
+    </svg>
+    Back to ChatBot
+  </a>
+
+  <script>
+    // Theme toggle functionality
+    const themeToggle = document.querySelector('.theme-toggle');
+    const html = document.documentElement;
+    
+    // Check for saved theme preference or use preferred color scheme
+    const savedTheme = localStorage.getItem('theme') || 
+                      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    html.setAttribute('data-theme', savedTheme);
+    
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      
+      // Animate the toggle button
+      themeToggle.style.transform = 'scale(0.9)';
+      setTimeout(() => {
+        themeToggle.style.transform = 'scale(1)';
+      }, 100);
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
-</html>
+  </html>
