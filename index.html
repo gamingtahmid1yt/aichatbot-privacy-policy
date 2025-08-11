@@ -3,35 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Privacy Policy for AI ChatBot 🇧🇩 - Learn how we handle your data">
-  <meta name="theme-color" content="#0088cc">
-  <title>Privacy Policy - AI ChatBot 🇧🇩</title>
+  <meta name="description" content="AI ChatBot 🇧🇩 Privacy Policy - Your privacy-first Bangladeshi AI assistant">
+  <meta name="theme-color" content="#2563eb">
+  <title>Privacy Policy | AI ChatBot 🇧🇩</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="aichatboticon1.png">
   <style>
     :root {
-      --primary: #0088cc;
-      --primary-dark: #006fa3;
-      --text: #222;
-      --text-dark: #000;
-      --bg: #f9f9f9;
-      --card-bg: #fff;
-      --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-      --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
-      --radius: 12px;
-      --transition: all 0.3s ease;
+      --primary: #2563eb;
+      --primary-light: #3b82f6;
+      --primary-dark: #1d4ed8;
+      --text: #334155;
+      --text-light: #64748b;
+      --text-dark: #0f172a;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+      --radius: 0.5rem;
+      --radius-lg: 0.75rem;
+      --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     [data-theme="dark"] {
-      --primary: #4da6ff;
-      --primary-dark: #2d8bf0;
-      --text: #e0e0e0;
-      --text-dark: #f5f5f5;
-      --bg: #121212;
-      --card-bg: #1e1e1e;
-      --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.4);
+      --primary: #3b82f6;
+      --primary-light: #60a5fa;
+      --primary-dark: #2563eb;
+      --text: #e2e8f0;
+      --text-light: #94a3b8;
+      --text-dark: #f1f5f9;
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4);
     }
 
     * {
@@ -44,12 +54,12 @@
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background: var(--bg);
       color: var(--text);
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: 0 auto;
-      line-height: 1.7;
-      animation: fadeIn 0.7s ease-in-out;
+      line-height: 1.6;
+      padding: 0;
+      margin: 0;
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     @keyframes fadeIn {
@@ -57,39 +67,114 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    h1 {
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    header {
       text-align: center;
-      margin-bottom: 2rem;
-      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
       color: var(--primary);
+      text-decoration: none;
       font-weight: 700;
-      line-height: 1.3;
+      font-size: 1.25rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .logo img {
+      height: 2rem;
+      width: auto;
+    }
+
+    h1 {
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .subtitle {
+      color: var(--text-light);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .last-updated {
+      display: inline-block;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-top: 1rem;
+    }
+
+    .policy-card {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      margin-bottom: 2rem;
     }
 
     h2 {
-      margin: 2rem 0 1rem;
-      color: var(--text-dark);
       font-size: 1.4rem;
       font-weight: 600;
+      color: var(--text-dark);
+      margin: 2rem 0 1rem;
       position: relative;
-      padding-left: 1rem;
+      padding-left: 1.25rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
     h2::before {
       content: '';
       position: absolute;
       left: 0;
-      top: 0.3em;
-      height: 1em;
-      width: 4px;
+      top: 0.35em;
+      height: 1.1em;
+      width: 5px;
       background: var(--primary);
-      border-radius: 2px;
+      border-radius: 3px;
     }
 
-    p {
-      margin: 1rem 0;
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin: 1.5rem 0 0.75rem;
+    }
+
+    p, li {
+      color: var(--text);
+      margin-bottom: 1rem;
       font-size: 1rem;
-      font-weight: 400;
+    }
+
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
     }
 
     strong {
@@ -97,66 +182,84 @@
       font-weight: 600;
     }
 
-    .policy-card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      padding: 2rem;
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-    }
-
-    .policy-card:hover {
-      box-shadow: var(--shadow-hover);
-      transform: translateY(-2px);
-    }
-
-    .last-updated {
-      display: inline-block;
-      background: rgba(0, 136, 204, 0.1);
+    a {
       color: var(--primary);
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      margin-bottom: 1.5rem;
+      text-decoration: none;
       font-weight: 500;
+      transition: var(--transition);
     }
 
-    .back-button {
-      position: fixed;
-      bottom: 2rem;
-      right: 1.5rem;
-      background: var(--primary);
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: var(--radius);
-      font-size: 0.9rem;
-      font-weight: 500;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: var(--shadow);
-      transition: var(--transition);
+    a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    .cta-buttons {
       display: flex;
+      gap: 1rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      z-index: 100;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius);
+      font-weight: 500;
+      transition: var(--transition);
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
     }
 
-    .back-button:hover {
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover {
       background: var(--primary-dark);
       transform: translateY(-2px);
-      box-shadow: var(--shadow-hover);
+      box-shadow: var(--shadow-lg);
+      text-decoration: none;
     }
 
-    .back-button svg {
-      width: 1rem;
-      height: 1rem;
-      fill: currentColor;
+    .btn-secondary {
+      background: var(--card-bg);
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     .theme-toggle {
       position: fixed;
-      bottom: 5.5rem;
+      bottom: 1.5rem;
       right: 1.5rem;
       width: 3rem;
       height: 3rem;
@@ -168,7 +271,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow-lg);
       transition: var(--transition);
       z-index: 100;
     }
@@ -183,8 +286,19 @@
       height: 1.2rem;
     }
 
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      border-radius: var(--radius);
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--primary);
+      margin-left: 0.5rem;
+    }
+
     @media (max-width: 768px) {
-      body {
+      .container {
         padding: 1.5rem 1rem;
       }
       
@@ -192,59 +306,151 @@
         padding: 1.5rem;
       }
       
-      .back-button {
-        padding: 0.7rem 1.2rem;
-        font-size: 0.8rem;
+      .cta-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      
+      .btn {
+        width: 100%;
+        justify-content: center;
       }
       
       .theme-toggle {
         width: 2.5rem;
         height: 2.5rem;
-        bottom: 5rem;
+        bottom: 1rem;
+        right: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="policy-card">
-    <h1>Privacy Policy</h1>
-    <span class="last-updated">Last Updated: August 8, 2025</span>
+  <div class="container">
+    <header>
+      <a href="https://gamingtahmid1yt.github.io/aichatbot/" class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 8V4H8"></path>
+          <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+          <path d="M2 14h2"></path>
+          <path d="M20 14h2"></path>
+          <path d="M15 13v2"></path>
+          <path d="M9 13v2"></path>
+        </svg>
+        AI ChatBot 🇧🇩
+      </a>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">Your privacy is our priority. Learn how we protect your data in our AI-powered chatbot application.</p>
+      <div class="last-updated">Last Updated: August 8, 2025</div>
+    </header>
 
-    <p>Welcome to the AI ChatBot 🇧🇩! This privacy policy explains how we handle your data when you use our chatbot application. We are committed to protecting your privacy and ensuring transparency about our data practices.</p>
+    <div class="policy-card">
+      <h2>1. Introduction</h2>
+      <p>Welcome to <strong>AI ChatBot 🇧🇩</strong>, your intelligent virtual assistant developed by Tahmid. This Privacy Policy explains how we collect, use, and protect your information when you use our application.</p>
+      
+      <h2>2. Data We Collect</h2>
+      <h3>2.1 Information You Provide</h3>
+      <ul>
+        <li><strong>Chat messages:</strong> Processed in real-time to generate responses</li>
+        <li><strong>Preferences:</strong> Theme selection and UI settings</li>
+      </ul>
+      
+      <h3>2.2 Information We Don't Collect</h3>
+      <p>We <strong>do not</strong> collect or store:</p>
+      <ul>
+        <li>Personal identifiers (name, email, phone number)</li>
+        <li>Device identifiers or precise location</li>
+        <li>Persistent chat logs (conversations are temporary)</li>
+      </ul>
 
-    <h2>1. Data Collection</h2>
-    <p>We prioritize your privacy and do not collect personally identifiable information such as your name, email address, phone number, or precise location. Your chat messages are processed in real-time to generate responses but are not persistently stored on our servers or shared with third parties, except as necessary for the operation of the service.</p>
+      <h2>3. How We Use Your Data</h2>
+      <ul>
+        <li>To provide and improve our chatbot services</li>
+        <li>To personalize your experience (theme preferences)</li>
+        <li>To maintain app functionality and security</li>
+      </ul>
 
-    <h2>2. Local Storage</h2>
-    <p>To enhance your user experience, our application may store certain non-personal preferences (such as theme selection) and recent chat history locally on your device using browser storage mechanisms. This data remains on your device and can be cleared through your browser settings.</p>
+      <h2>4. Data Storage & Security</h2>
+      <h3>4.1 Local Storage</h3>
+      <p>All user data is stored <strong>exclusively on your device</strong> using:</p>
+      <ul>
+        <li>Android's Room Database for chat history</li>
+        <li>SharedPreferences for app settings</li>
+      </ul>
+      <p>You can clear this data anytime through your device settings or by uninstalling the app.</p>
+      
+      <h3>4.2 Security Measures</h3>
+      <ul>
+        <li>HTTPS encryption for all API communications</li>
+        <li>Regular security audits of our codebase</li>
+        <li>Minimal data collection principles</li>
+      </ul>
 
-    <h2>3. Third-party APIs</h2>
-    <p>Our chatbot utilizes third-party artificial intelligence APIs (such as Groq) to process and respond to your queries. While we select reputable providers, we do not control their data handling practices. We recommend reviewing the privacy policies of these third-party services for more information.</p>
+      <h2>5. Third-Party Services</h2>
+      <p>Our chatbot uses these trusted providers:</p>
+      <ul>
+        <li><strong>Groq API:</strong> For AI processing (view their <a href="https://groq.com/privacy" target="_blank">Privacy Policy</a>)</li>
+        <li><strong>Firebase:</strong> For anonymous crash reporting (disabled by default)</li>
+      </ul>
+      <p>We minimize data shared with third parties and anonymize requests where possible.</p>
 
-    <h2>4. Security Measures</h2>
-    <p>We implement industry-standard security protocols to protect your data during transmission and processing. However, please be aware that no electronic storage or transmission method is 100% secure. We continuously monitor and update our security practices to address emerging threats.</p>
+      <h2>6. Your Rights & Choices</h2>
+      <ul>
+        <li><strong>Access:</strong> View all stored data via device settings</li>
+        <li><strong>Delete:</strong> Clear app data or uninstall</li>
+        <li><strong>Opt-out:</strong> Disable permissions in device settings</li>
+      </ul>
 
-    <h2>5. Policy Updates</h2>
-    <p>We may periodically update this privacy policy to reflect changes in our practices or legal requirements. Significant changes will be communicated through our application or website. Your continued use of the service after such changes constitutes acceptance of the updated policy.</p>
+      <h2>7. Policy Updates</h2>
+      <p>We may update this policy to reflect changes in our practices. Significant changes will be notified through:</p>
+      <ul>
+        <li>In-app notifications</li>
+        <li>Updates on our <a href="https://gamingtahmid1yt.github.io/aichatbot/">website</a></li>
+        <li>Email (if provided)</li>
+      </ul>
 
-    <h2>6. Contact Information</h2>
-    <p>For any questions, concerns, or requests regarding your privacy or this policy, please contact us at: <strong>tahmidbusinessyt@gmail.com</strong>. We typically respond to inquiries within 2-3 business days.</p>
+      <h2>8. Contact Us</h2>
+      <p>For questions about this policy or data requests:</p>
+      <ul>
+        <li>Email: <a href="mailto:tahmidbusinessyt@gmail.com">tahmidbusinessyt@gmail.com</a></li>
+        <li>Response time: Within 48 hours</li>
+      </ul>
+      
+      <div class="cta-buttons">
+        <a href="https://gamingtahmid1yt.github.io/aichatbot-download/" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download APK
+        </a>
+        <a href="https://gamingtahmid1yt.github.io/aichatbot/" class="btn btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Visit Website
+        </a>
+      </div>
+    </div>
   </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://gamingtahmid1yt.github.io/aichatbot/">Home</a>
+      <a href="https://gamingtahmid1yt.github.io/aichatbot-download/">Download</a>
+      <a href="mailto:tahmidbusinessyt@gmail.com">Contact</a>
+    </div>
+    <p>© 2025 AI ChatBot 🇧🇩. All rights reserved. Developed by Tahmid</p>
+  </footer>
 
   <!-- Theme Toggle Button -->
   <button class="theme-toggle" aria-label="Toggle dark mode">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z"/>
     </svg>
   </button>
-
-  <!-- Back Button -->
-  <a href="https://gamingtahmid1yt.github.io/aichatbot/" class="back-button">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"/>
-    </svg>
-    Back to ChatBot
-  </a>
 
   <script>
     // Theme toggle functionality
@@ -268,16 +474,6 @@
         themeToggle.style.transform = 'scale(1)';
       }, 100);
     });
-    
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
   </script>
 </body>
-  </html>
+          </html>
